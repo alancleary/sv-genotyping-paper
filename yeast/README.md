@@ -22,6 +22,22 @@ Subsequently, it will run 3 SV calling pipelines on the 11 non-reference strains
 - [LAST](http://last.cbrc.jp/) + [AsmVar](https://github.com/bioinformatics-centre/AsmVar)
 - [nucmer](https://github.com/mummer4/mummer) + [Assemblytics](https://github.com/marianattestad/assemblytics)
 
+The pipeline requires the following software and was run with the versions specif
+- [Python](https://www.python.org/) (3.9.7)
+- [Snakemake](https://snakemake.readthedocs.io/en/stable/) (6.15.5)
+- [LAST](https://gitlab.com/mcfrith/last) (commit c04459530988dca1bb4f951f559b35343bcde159)
+- [minimap2](https://github.com/lh3/minimap2) (2.24)
+- [nucmer (MUMmer)](https://github.com/mummer4/mummer) (4.0.0rc1)
+- [AsmVar](https://github.com/bioinformatics-centre/AsmVar) (commit 5abd91a47feedfbd39b89ec3e2d6d20c02fe5a5e)
+- [Assemblytics](https://github.com/MariaNattestad/Assemblytics) (commit 54a479758526496483a4504bfa5646f8366fc79a)
+- [R](https://www.r-project.org/) (4.1.2)
+    - ggplot (3.3.5)
+    - plyr (1.8.6)
+    - RColorBrewer (1.1.2)
+    - scales (1.1.1)
+- [bedtools](https://github.com/arq5x/bedtools2) (2.30.0)
+
+
 Because the resulting callsets differ considerably, the union of all 3 callsets is produced (high-sensitivy callset).
 Finally, the high-sensitivity callsets of all 11 non-reference strains are merged.
 

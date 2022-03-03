@@ -66,7 +66,7 @@ rule run_nucmer:
     output:
         "nucmer_output/{sample}.delta"
     shell:
-        "nucmer --maxmatch --minmatch 15 --maxgap 500 --mincluster 200 --diagdiff 20 {input.reference} {input.assembly} -prefix nucmer_output/{wildcards.sample}"
+        "nucmer --maxmatch --minmatch 15 --maxgap 500 --mincluster 200 --diagdiff 20 {input.reference} {input.assembly} --prefix nucmer_output/{wildcards.sample}"
 
 
 #########
@@ -169,7 +169,7 @@ rule run_assemblytics:
     output:
         "assemblytics_output/{sample}.Assemblytics_structural_variants.bed"
     shell:
-        "Assemblytics {input} assemblytics_output/{wildcards.sample} 5000 ~/bin/Assemblytics/"
+        "Assemblytics {input} assemblytics_output/{wildcards.sample} 5000 1 5000"
 
 
 rule convert_assemblytics_bed_to_bed:
