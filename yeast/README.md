@@ -11,8 +11,8 @@ The experiments comprise several phases which are explained in the following:
 ## 1. Prepare yeast assemblies and call SVs relative to the reference strain S288C
 
 ```
-git clone https://github.com/vgteam/sv-genotyping-paper.git
-cd yeast/assemblies
+git clone https://github.com/alancleary/sv-genotyping-paper.git
+cd alancleary/yeast/assemblies
 snakemake
 ```
 
